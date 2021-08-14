@@ -1,83 +1,87 @@
-html {
-    overflow-x: scroll;
-}
-
-body {
+.timeline__containter {
     background: rgb(249,226,202);
     background: linear-gradient(180deg, rgba(249,226,202,1) 0%, rgba(250,218,231,1) 100%);
-}
-
-.timeline_containter {
     margin-left: 130px;
-    width: 100%;
     height: 100vh;
-    display: flex;
-    flex-direction: column;
+    position: relative;
 }
 
-.timeline_title {
-    width: 100vw;
-}
-
-.timeline_title h2{
+h1 {
     color: white;
-    position: fixed;
-    padding: 25px;
+    padding: 20px;
+    text-align: center;
+}
+
+h3 {
+    color: white;
+    padding: 5px;
+    text-align: center;
+}
+
+.timeline__line {
+    width: 2px;
+    height: 200vh;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+  left: 50%;
+  transform: translate(-50%, -0%);
 }
 
 .timeline {
-    height: 100%;
-    padding: 25px;
-    overflow-x: scroll;
-}
-
-.line_top, .line_bottom {
-    height: 50%;
-    display: flex;  
-    overflow-x: scroll;  
-    width: 5000px;
-}
-
-.line_top {
-    border-bottom: 3px solid white;
-    align-items: flex-end;
-    
-}
-
-.line_bottom {
-    border-top: 3px solid white;
-}
-
-.timeline_box {
-    text-align: justify;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    width: 150px;
-}
-
-.top {
-    position: absolute;
-    top: 50%;
-    margin-top: -10px;
-    z-index: 99;
-}
-
-.bottom {
-    position: absolute;
-    bottom: 50%;
-    margin-bottom: -10px;
-    z-index: 99;
-}
-
-.timeline_piece {
-    display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
+    width: 100%;
 }
 
-.circle {
-    height: 20px;
+.timeline__box {
+    width: 100%;
+    display: block;
+}
+
+.timeline__left, .timeline__right {
+    width: 50%;
+    overflow-x: visible;
+}
+
+.timeline__left {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.timeline__right {
+    display: flex;
+    margin-left: auto;
+}
+
+.left__point {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: -15px;
+    z-index: 99;
+}
+
+.timeline__left h3 {
+    text-align: right;
+}
+
+.timeline__right h3 {
+    text-align: left;
+}
+
+.right__point {
+    display: flex;
+    align-items: center;
+    margin-left: -15px;
+    z-index: 99;
+}
+
+.line {
+    width: 10px;
+    height: 2px;
+    background-color: white;
 }
 
 .circle i {
@@ -86,17 +90,12 @@ body {
     text-align: center;
     background-color: white;
     border-radius: 50%;
-    padding: 5px;
+    padding: 10px;
 }   
 
-.line {
-    height: 20px;
-    width: 5px;
-    background-color: white;
-}
-
-.timeline_text {
-    color: rgb(51, 51, 51);
+.timeline__text {
     font-size: 1vw;
-    padding: 5px;
+    padding: 20px;
+    width: 300px;
+    text-align: justify;
 }
